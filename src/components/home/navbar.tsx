@@ -10,7 +10,7 @@ const Navbar = () => {
            <h1>Anwar Tv</h1>
            <div>
               <Button variant="outline">Sign-in</Button>
-                <Button variant="danger">Sign-out</Button>
+                <Button variant="danger">Sign-up</Button>
            </div>
         </div>
         </div>
