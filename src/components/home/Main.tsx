@@ -2,7 +2,16 @@ import React from 'react';
 import News from '../news/News';
 import MostReaded from '../MostReaded/MostReaded';
 
-const Main = () => {
+
+
+const Main = async () => {
+    // data fetching part 
+    const res = await fetch("https://news-api-v2.vercel.app/api/news/sections")
+    const data= await res.json()
+    console.log(data.data[0].articles[0].description)
+
+
+
     return (
         <div  className="grid grid-cols-3 max-w-7xl mx-auto">
             {/* news section */}
