@@ -1,6 +1,7 @@
 import React from 'react';
 import { info } from 'next/dist/build/output/log';
 import Topnews from '../topNews/Topnews';
+import Newscard from '../newscard/Newscard';
 
 
 
@@ -27,7 +28,8 @@ const Main = async () => {
                 {otn.map((elm,idx:number)=>(<h1  key={idx} className="border-2 border-pink-600 ">
                     {elm.title}
                     <div>
-                        card will be here
+                     {elm.articles.map((n,idx:number)=><Newscard key={idx}></Newscard>)}
+                    {/* <Newscard></Newscard> */}
                     </div>
                     
                 </h1>
