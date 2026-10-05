@@ -28,7 +28,7 @@ const Navlink = async () => {
     // console.log(data);
     // console.log(data.data)
     const navs=data.data
-    console.log(navs)
+  
     // console.log(navs)
     return (
         <div className="flex items-center justify-center gap-5 bg-amber-200 container mx-auto">

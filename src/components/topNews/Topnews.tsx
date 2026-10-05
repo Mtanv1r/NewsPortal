@@ -1,12 +1,18 @@
 import Image from 'next/image';
 import React from 'react';
 
+
+
+
+
 const Topnews = ({topNews}) => {
-    // console.log(topNews)
+
+  
     const firstNews= topNews[0]
-    // console.log(firstNews)
+    
     const otherNews= topNews.slice(1,5)
-    console.log(otherNews)
+    
+  
 
     return (
         <div className="flex justify-evenly items-center">
