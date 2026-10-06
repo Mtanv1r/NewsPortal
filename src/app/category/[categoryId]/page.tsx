@@ -1,3 +1,4 @@
+import { Link } from '@heroui/react';
 import { console } from 'next/dist/compiled/@edge-runtime/primitives';
 import { Elms_Sans } from 'next/font/google';
 import React from 'react';
@@ -10,6 +11,8 @@ const Category = async ({params}) => {
     const data= await res.json()
     const CategoryNews=data.data
 
+  
+
 
 
 
@@ -21,7 +24,8 @@ const Category = async ({params}) => {
     return (
         <div>
          <h1 className="font-bold text-red-500">{data.title}</h1>
-         <p className="grid grid-cols-3 gap-7 p-15">{CategoryNews.map((elm,idx)=>(
+         <p className="grid grid-cols-3 gap-7 p-15">{CategoryNews.map((elm,idx:number)=>(
+          <Link href={`/news/${elm.id}`} key={idx}>
 
   <article className="group flex flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white" key={idx}>
       <a
@@ -58,6 +62,9 @@ const Category = async ({params}) => {
         </div>
       </a>
     </article>
+
+          </Link>
+
 
 
 
